@@ -43,6 +43,9 @@ function farmOnce() {
 function startFarmBot() {
     btnStartOnce.setAttribute("disabled", "true");
     btnStartBot.setAttribute("disabled", "true");
+    var activeFarmBot = $("<div><h1 style='color: red; text-align: center;'>FARMBOT AKTIV - Nichts klicken!!!</h1></div>");
+$("#contentContainer").before(activeFarmBot);
+
     var timeout = (timeBetweenFarm.value * 60 * 1000) + Math.random((variationBetweenFarm.value * 60 * 1000));
     doFarm();
     var now = new Date();

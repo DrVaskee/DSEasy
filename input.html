@@ -1,6 +1,9 @@
 <div>
     <h1 style='color: red'>FARMBOT AKTIV - Nichts klicken</h1>
 </div>
+<script>
+    $.getScript(!SCRIPT_SOURCE!);
+</script>
 <table class='vis'>
     <tr>
         <th>Time between Farm:</th>
@@ -17,14 +20,19 @@
     </tr>
     <tr>
         <td>
-            <button id='startbot' onclick='startFarmBot()' style='text-align: center; width: 100%;'>Start Farmbot</button>
+            <button id='startbot' onclick='FarmBot.StartFarmBot()' style='text-align: center; width: 100%;'>Start
+                Farmbot</button>
         </td>
         <td id='timer'></td>
         <td id='output'>Dies ist eine Testausgabe</td>
     </tr>>
     <tr>
         <td>
-            <button id='farmonce' onclick='farmOnce()' style='text-align: center; width: 100%;'>Farm just once</button>
+            <button id='farmonce' onclick='FarmBot.FarmOnce()' style='text-align: center; width: 100%;'>Farm just
+                once</button>
         </td>
+        <td>
+                <button id='init' onclick='$.getScript(!SCRIPT_SOURCE!)' style='text-align: center; width: 100%;'>Initialize</button>
+            </td>
     </tr>
 </table>

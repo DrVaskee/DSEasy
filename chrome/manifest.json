@@ -1,9 +1,9 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "DSEasy",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "This extension supports players of tribal wars.",
+  "homepage_url": "https://github.com/DrVaskee/DSEasy",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -15,13 +15,15 @@
     "persistent": true
   },
   "permissions": [
+    "contextMenus",
     "cookies",
-    "https://*die-staemme.de/*"
+    "tabs",
+    "https://*.die-staemme.de/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://*.die-staemme.de/*"
       ],
       "js": [
         "src/inject/inject.js"
